@@ -491,7 +491,7 @@ function lunch()
 
     if [ -z "$variant" ]; then
         variant=$release
-        release=$(ls -1 -I trunk -I root $(gettop)/build/release/aconfig/)
+        release=$(ls -1 -I trunk_staging -I root $(gettop)/build/release/aconfig/ | tail -n1)
     fi
 
     if [[ -z "$product" ]] || [[ -z "$release" ]] || [[ -z "$variant" ]]
